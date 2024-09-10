@@ -1,0 +1,26 @@
+{
+    "name": "Ad Shield",
+    "version": "1.0.0", 
+    "description": "Lappu sa AdBlocker🌚🌚🌚",
+    "manifest_version": 3,
+    "permissions": [
+        "declarativeNetRequest",
+        "declarativeContent"
+    ],
+    "content_scripts": [
+        {
+            "matches": [ "*://*.doubleclick.net/*",  
+                         "*://*.googleadservices.com/*"],
+            "css": ["hide_ads.css"]
+        }
+    ],
+    "declarative_net_request":{
+        "rule_resources":[
+            {
+                "id":   "ruleset_1",
+                "enabled":  true,
+                "path": "rules.json"
+            }
+        ]
+    }
+}
