@@ -1,10 +1,18 @@
+document.getElementById('downloadButton').addEventListener('click', () => {
+    let zip = new JSZip();
+    let jsonFolder = zip.folder('jsonfiles');
+    
+    jsonFolder.file('manifest.json', `{
+        "manifest_version": 3, "name": "My Extension", "version": "1.0.0" 
+    }`);
+    jsonFolder.file('rules.json', `{
+        "rule1": "some rule", "rule2": "another rule"
+    }`);
 
-    document.getElementById('downloadButton').addEventListener('click', function() {
-        const extensionUrl = './extension.zip'; // Corrected spelling of 'extension'
-        const anchor = document.createElement('a');
-        anchor.href = extensionUrl;
-        anchor.download = 'AD_Shield_Extension.zip';  // Name of downloaded file
-        document.body.appendChild(anchor);
-        anchor.click();
-        document.body.removeChild(anchor);
+    zip.generateAsync({ type: "blob" }).then(content => {
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(content);
+        link.download = "jsonfiles.zip";
+        link.click();
     });
+});
