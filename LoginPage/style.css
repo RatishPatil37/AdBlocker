@@ -126,6 +126,10 @@ button {
   border: none;
   outline: none;
 }
+button:hover{
+  transform: translateY(5%);
+  color: black;
+}
 
 .signUp-link {
   font-size: 14px;
