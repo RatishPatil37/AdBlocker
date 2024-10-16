@@ -1,0 +1,4 @@
+.c1,.ad-banner, .ad-container, .adsbygoogle, iframe[src*="ads"],[id*="ads"]
+{
+    display: none !important;  
+}
