@@ -12,7 +12,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #fff;
+  background: #ECDFCC;;
 }
 
 .wrapper {
@@ -20,7 +20,7 @@ body {
   width: 400px;
   height: 500px;
   background: #fff;
-  box-shadow: 0 0 50px #C68FE6;
+  box-shadow: 0 0 70px black;
   border-radius: 20px;
   padding: 40px;
   overflow: hidden;
@@ -30,11 +30,6 @@ body {
   animation: animate 1s linear infinite;
 }
 
-@keyframes animate {
-  100% {
-    filter: hue-rotate(deg);
-  }
-}
 
 .form-wrapper {
   display: flex;
@@ -108,15 +103,14 @@ h2 {
 }
 
 .remember label input {
-  accent-color: #C68FE6;
+  accent-color: black;
 }
 
 button {
   position: relative;
   width: 100%;
   height: 40px;
-  background: #C68FE6;
-  box-shadow: 0 0 10px #C68FE6;
+  background: black;
   font-size: 16px;
   color: #fff;
   font-weight: 500;
@@ -127,7 +121,7 @@ button {
 }
 button:hover{
   transform: translateY(5%);
-  color: black;
+  color: #fff;
 }
 
 .signUp-link {
@@ -141,9 +135,9 @@ button:hover{
 }
 
 .signUp-link p a {
-  color:#4B70F5;
+  color:black;
+  font-weight: bold;
   text-decoration: none;
-  font-weight: 500;
 }
 
 .signUp-link p a:hover {
